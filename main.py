@@ -28,14 +28,14 @@ class KeywordQueryEventListener(EventListener):
         int_ip = findip.get_local_ip()
 
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='Local IP',
-                                         description='IP:  %s' % int_ip,
-                                         on_enter=CopyToClipboardAction(int_ip)))
-
-        items.append(ExtensionResultItem(icon='images/icon.png',
                                          name='External IP',
                                          description='IP: %s' % ext_ip,
                                          on_enter=CopyToClipboardAction(ext_ip)))
+
+        items.append(ExtensionResultItem(icon='images/icon.png',
+                                         name='Local IP',
+                                         description='IP:  %s' % int_ip,
+                                         on_enter=CopyToClipboardAction(int_ip)))
 
         return RenderResultListAction(items)
 
